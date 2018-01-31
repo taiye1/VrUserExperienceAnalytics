@@ -1,0 +1,15 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class SetupLocalPlayer : NetworkBehaviour {
+
+	// Use this for initialization
+	void Start () {
+        if (isLocalPlayer)
+            GetComponent<MouseLook>().enabled = true;
+        GetComponent<PlayMovieOnSpace>().enabled = true;
+        GetComponent<PlayVideo>().enabled = true;
+        GetComponent<VideoController>().enabled = true;
+    }
+}
